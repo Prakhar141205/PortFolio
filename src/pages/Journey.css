@@ -1,0 +1,267 @@
+.journey-page {
+  min-height: 100vh;
+
+  padding: 120px 24px 100px;
+
+  background:
+    radial-gradient(
+      circle at 50% -20%,
+      rgba(99, 102, 241, 0.14),
+      transparent 45%
+    ),
+    #08090c;
+}
+
+.journey-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   Header
+   ========================= */
+
+.journey-header {
+  margin-bottom: 64px;
+}
+
+.journey-header h1 {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(56px, 8vw, 88px);
+  font-weight: 600;
+
+  letter-spacing: -4px;
+  line-height: 0.95;
+
+  color: #f5f7fa;
+
+  margin-bottom: 20px;
+}
+
+.journey-header h2 {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 32px;
+  font-weight: 400;
+
+  font-style: italic;
+  letter-spacing: -1px;
+
+  color: #a5a9b5;
+
+  margin-bottom: 20px;
+}
+
+.journey-header p {
+  max-width: 620px;
+
+  color: #747987;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   Search
+   ========================= */
+
+.journey-search {
+  position: relative;
+
+  margin-bottom: 14px;
+}
+
+.journey-search::before {
+  content: "⌕";
+
+  position: absolute;
+
+  left: 18px;
+  top: 50%;
+
+  transform: translateY(-52%);
+
+  color: #555b68;
+
+  font-size: 20px;
+
+  pointer-events: none;
+}
+
+.journey-search input {
+  width: 100%;
+  height: 54px;
+
+  padding: 0 20px 0 48px;
+
+  background: rgba(16, 17, 22, 0.85);
+
+  border: 1px solid #242630;
+
+  border-radius: 12px;
+
+  color: #f5f7fa;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.journey-search input::placeholder {
+  color: #555b68;
+}
+
+.journey-search input:hover {
+  border-color: #30333e;
+}
+
+.journey-search input:focus {
+  background: #101116;
+
+  border-color: rgba(99, 102, 241, 0.55);
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.08),
+    0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   Filters
+   ========================= */
+
+.journey-filters {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  overflow-x: auto;
+
+  padding: 6px 0 12px;
+
+  margin-bottom: 36px;
+
+  scrollbar-width: none;
+}
+
+.journey-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-button {
+  flex-shrink: 0;
+
+  padding: 8px 15px;
+
+  background: #0d0e12;
+
+  border: 1px solid #272a33;
+
+  border-radius: 999px;
+
+  color: #777d8a;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.filter-button:hover {
+  color: #d7d9df;
+
+  background: #13151b;
+
+  border-color: #3a3e4a;
+
+  transform: translateY(-1px);
+}
+
+.filter-button.active {
+  color: #ffffff;
+
+  background: #4f46e5;
+
+  border-color: #6366f1;
+
+  box-shadow:
+    0 4px 18px rgba(79, 70, 229, 0.22);
+}
+
+
+/* =========================
+   Journey Cards
+   ========================= */
+
+.journey-list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================
+   No Results
+   ========================= */
+
+.no-results {
+  padding: 60px 0;
+
+  color: #5f6470;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 900px) {
+  .journey-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .journey-page {
+    padding: 90px 18px 70px;
+  }
+
+  .journey-header {
+    margin-bottom: 50px;
+  }
+
+  .journey-header h1 {
+    letter-spacing: -3px;
+  }
+
+  .journey-header h2 {
+    font-size: 27px;
+  }
+
+  .journey-header p {
+    font-size: 16px;
+  }
+
+  .journey-list {
+    grid-template-columns: 1fr;
+  }
+}

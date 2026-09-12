@@ -1,0 +1,171 @@
+.journey-day-page {
+  min-height: 100vh;
+  padding: 100px 24px 80px;
+}
+
+.journey-day-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Back link */
+
+.journey-back {
+  display: inline-block;
+  margin-bottom: 60px;
+
+  color: #777;
+  font-size: 13px;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.journey-back:hover {
+  color: #fff;
+}
+
+/* Header */
+
+.journey-day-header {
+  margin-bottom: 70px;
+}
+
+.journey-day-label {
+  display: block;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #777;
+
+  margin-bottom: 12px;
+}
+
+.journey-day-date {
+  color: #666;
+  font-size: 14px;
+
+  margin-bottom: 28px;
+}
+
+.journey-day-header h1 {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+/* Activities */
+
+.activities-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #777;
+
+  margin-bottom: 20px;
+}
+
+.journey-day-activities {
+  border-top: 1px solid #252525;
+}
+
+.journey-day-activity {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+
+  gap: 20px;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.day-activity-number {
+  font-size: 12px;
+  color: #555;
+}
+
+.day-activity-category {
+  display: block;
+
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #777;
+
+  margin-bottom: 8px;
+}
+
+.day-activity-content h2 {
+  font-size: 19px;
+  font-weight: 500;
+
+  margin-bottom: 8px;
+}
+
+.day-activity-content p {
+  max-width: 650px;
+
+  color: #888;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Tags */
+
+.journey-day-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 50px;
+}
+
+.journey-day-tags span {
+  padding: 7px 13px;
+
+  border: 1px solid #292929;
+  border-radius: 100px;
+
+  color: #888;
+  font-size: 11px;
+}
+
+
+/* Filters */
+
+.journey-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-bottom: 40px;
+}
+
+.filter-button {
+  padding: 8px 14px;
+
+  background: transparent;
+  border: 1px solid #292929;
+  border-radius: 100px;
+
+  color: #777;
+  font-family: inherit;
+  font-size: 12px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.filter-button:hover {
+  border-color: #444;
+  color: #ccc;
+}
+
+.filter-button.active {
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+  color: #0a0a0a;
+}
